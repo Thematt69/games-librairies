@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "970765554871",
+    "project_id": "espi-dev-environnement",
+    "storage_bucket": "espi-dev-environnement.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970765554871:android:0fe5c7de3bad69a0d72932",
+        "android_client_info": {
+          "package_name": "com.md.books"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970765554871-i7fq6peqp8it74aglm3gmgr6q0uiavqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMEOUEmFq114S8agk7VBsQtt7W2KEdd0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970765554871-i7fq6peqp8it74aglm3gmgr6q0uiavqf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

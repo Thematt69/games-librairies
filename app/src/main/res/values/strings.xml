@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Librairie de jeux</string>
+
+    <!-- Toasts Message -->
+    <string name="succesAuthentification">Authentification réussie !</string>
+    <string name="errorAuthentification">Authentification échouée !</string>
+
+    <!-- Login View -->
+    <string name="contentDescriptionImageView3">Image un peu nul</string>
+    <string name="emailLabel">Email</string>
+    <string name="passwordLabel">Mot de passe</string>
+    <string name="connexionLabelButton">SE CONNECTER</string>
+
+    <!-- Home View -->
+    <string name="imageDuJeu">Image du jeu</string>
+
+    <!-- Popup -->
+    <string name="iconFermeture">Icon de fermeture</string>
+    <string name="dejaJoue">Déjà joué ?</string>
+</resources>
