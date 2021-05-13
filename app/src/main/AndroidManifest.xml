@@ -25,6 +25,9 @@
             </intent-filter>
         </activity>
         <activity android:name="com.md.games.MainActivity" />
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
     </application>
 
 </manifest>

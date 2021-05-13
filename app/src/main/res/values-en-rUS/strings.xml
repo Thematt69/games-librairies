@@ -3,11 +3,13 @@
     <string name="app_name">Games Library</string>
     <string name="succesAuthentification">Authentication successful!</string>
     <string name="errorAuthentification">Authentication failed!</string>
-    <string name="contentDescriptionImageView3">Picture a little bad</string>
+    <string name="contentDescriptionImageView3">Image representing video games</string>
     <string name="emailLabel">E-mail</string>
     <string name="passwordLabel">Password</string>
     <string name="connexionLabelButton">TO LOG IN</string>
     <string name="imageDuJeu">Game image</string>
     <string name="iconFermeture">Close icon</string>
-    <string name="dejaJoue">Already played?</string>
+    <string name="dejaJoueQuestion">Already played?</string>
+    <string name="dejaJoue">Already played</string>
+    <string name="pasEncoreJoue">Not yet played</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/popup_game_details"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="360dp"
@@ -8,20 +9,20 @@
 
     <TextView
         android:id="@+id/popup_game_title"
-        style="@style/TitleTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginEnd="40dp"
         android:text="Titre du jeu"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TitleTextStyle" />
 
     <ImageView
         android:id="@+id/close_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:contentDescription="@string/iconFermeture"
-        android:src="@drawable/ic_close_dark"
         android:elevation="2dp"
+        android:src="@drawable/ic_close_dark"
         app:layout_constraintBottom_toBottomOf="@+id/popup_game_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/popup_game_title" />
@@ -33,7 +34,7 @@
         android:layout_marginTop="@dimen/default_margin"
         android:checked="false"
         android:fontFamily="@font/kanit"
-        android:text="@string/dejaJoue"
+        android:text="@string/dejaJoueQuestion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_game_title" />
 
@@ -56,61 +57,61 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/imageDuJeu"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/dribbble" />
+            app:srcCompat="@drawable/technology" />
 
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/popup_game_description"
-        android:fontFamily="@font/kanit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
+        android:fontFamily="@font/kanit"
         android:text="Descrition du jeu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
         android:id="@+id/popup_game_developmentTeam"
-        android:fontFamily="@font/kanit"
-        android:textColor="@color/lightGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
+        android:fontFamily="@font/kanit"
         android:text="Equipe de développement"
+        android:textColor="@color/lightGray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_game_description" />
 
     <TextView
         android:id="@+id/popup_game_editorialTeam"
-        android:fontFamily="@font/kanit"
-        android:textColor="@color/lightGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
+        android:fontFamily="@font/kanit"
         android:text="Equipe d'édition"
+        android:textColor="@color/lightGray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_game_developmentTeam" />
 
     <TextView
         android:id="@+id/popup_game_releaseDate"
-        android:fontFamily="@font/kanit"
-        android:textColor="@color/lightGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
+        android:fontFamily="@font/kanit"
         android:text="Date de sortie"
+        android:textColor="@color/lightGray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_game_editorialTeam" />
 
     <TextView
         android:id="@+id/popup_game_price"
-        android:fontFamily="@font/kanit"
-        android:textColor="@color/lightGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
+        android:fontFamily="@font/kanit"
         android:text="Prix"
+        android:textColor="@color/lightGray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_game_releaseDate" />
 
@@ -118,14 +119,11 @@
         android:id="@+id/popup_game_steamUrl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
         android:fontFamily="@font/kanit"
         android:text="Lien vers la boutique"
         android:textColor="@color/blueUrl"
-        android:layout_marginTop="@dimen/default_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_game_price" />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

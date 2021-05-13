@@ -6,7 +6,7 @@
     <string name="errorAuthentification">Authentification échouée !</string>
 
     <!-- Login View -->
-    <string name="contentDescriptionImageView3">Image un peu nul</string>
+    <string name="contentDescriptionImageView3">Image représentant les jeux vidéos</string>
     <string name="emailLabel">Email</string>
     <string name="passwordLabel">Mot de passe</string>
     <string name="connexionLabelButton">SE CONNECTER</string>
@@ -16,5 +16,9 @@
 
     <!-- Popup -->
     <string name="iconFermeture">Icon de fermeture</string>
-    <string name="dejaJoue">Déjà joué ?</string>
+    <string name="dejaJoueQuestion">Déjà joué ?</string>
+    
+    <!-- Status -->
+    <string name="dejaJoue">Déjà joué</string>
+    <string name="pasEncoreJoue">Pas encore joué</string>
 </resources>

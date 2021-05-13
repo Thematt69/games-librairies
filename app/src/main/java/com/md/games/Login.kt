@@ -23,16 +23,16 @@ class Login : AppCompatActivity() {
         auth = Firebase.auth
     }
 
-    //public override fun onStart() {
-    //    super.onStart()
-    //    Log.i("MD","onStart => Login")
-    //    // Check if user is signed in (non-null) and update UI accordingly.
-    //    val currentUser = auth.currentUser
-    //    if(currentUser != null){
-    //        Log.i("MD","autoLogin => Login")
-    //        updateUI(currentUser)
-    //    }
-    //}
+    public override fun onStart() {
+        super.onStart()
+        Log.i("MD","onStart => Login")
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            Log.i("MD","autoLogin => Login")
+            updateUI(currentUser)
+        }
+    }
 
     fun onLogin(view: View){
         Log.i("MD","onLogin => Login")

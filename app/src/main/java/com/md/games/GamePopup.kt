@@ -4,11 +4,13 @@ import android.app.Dialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.Window
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.google.firebase.firestore.FirebaseFirestore
 import com.md.games.adapter.GamesAdapter
 
 
@@ -63,7 +65,18 @@ class GamePopup(
             adapter.context.startActivity(openURL)
         }
         popupGameStatus.setOnClickListener {
-            // TODO - Modifier en bdd
+            // FIXME - Si l'utilisateur clique à plusieurs reprise sur la checkbox, la modification n'est pas prise en compte
+            // On se connecte à firestore et met à jour le champ
+            val db = FirebaseFirestore.getInstance()
+            db.collection("games")
+                .document(currentGame.id)
+                .update("status",!currentGame.status)
+                .addOnSuccessListener {
+                    Log.d("Firestore", "DocumentSnapshot successfully updated!")
+                }
+                .addOnFailureListener { exception ->
+                    Log.w("Firestore", "Error updating document", exception)
+                }
         }
     }
 
