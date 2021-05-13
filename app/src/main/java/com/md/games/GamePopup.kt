@@ -1,6 +1,7 @@
 package com.md.games
 
 import android.app.Dialog
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.Window
@@ -9,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.md.games.adapter.GamesAdapter
+
 
 class GamePopup(
     private val adapter: GamesAdapter,
@@ -54,9 +56,11 @@ class GamePopup(
         popupGameReleaseDate.text = currentGame.releaseDate
         popupGameEditorialTeam.text = currentGame.editorialTeam
         popupGamePrice.text = currentGame.price.toString() + " €"
-        popupGameSteamUrl.text = currentGame.steamUrl
         popupGameSteamUrl.setOnClickListener {
-            // TODO - Ouvrir un navigateur avec l'url
+            // On crée un intent avec le lien du jeu
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse(currentGame.steamUrl)
+            adapter.context.startActivity(openURL)
         }
         popupGameStatus.setOnClickListener {
             // TODO - Modifier en bdd

@@ -2,50 +2,40 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="360dp"
     android:layout_height="wrap_content"
     android:padding="@dimen/default_margin">
 
-    <LinearLayout
-        android:id="@+id/linear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <TextView
+        android:id="@+id/popup_game_title"
+        style="@style/TitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="40dp"
+        android:text="Titre du jeu"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-        <TextView
-            android:id="@+id/popup_game_title"
-            style="@style/TitleTextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Titre du jeu" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/close_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="@string/iconFermeture"
-            android:src="@drawable/ic_close_dark" />
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/iconFermeture"
+        android:src="@drawable/ic_close_dark"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/popup_game_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/popup_game_title" />
 
     <CheckBox
         android:id="@+id/popup_game_status"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginTop="@dimen/default_margin"
         android:checked="false"
         android:fontFamily="@font/kanit"
         android:text="@string/dejaJoue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear" />
+        app:layout_constraintTop_toBottomOf="@+id/popup_game_title" />
 
 
     <androidx.cardview.widget.CardView
@@ -55,6 +45,8 @@
         android:layout_marginTop="@dimen/default_margin"
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_game_status">
 
 
@@ -63,7 +55,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/imageDuJeu"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/dribbble" />
 
     </androidx.cardview.widget.CardView>
 
@@ -77,12 +70,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    // FIXME - Si developmentTeam est court, alors conflit sur l'autre ligne
-    // Voir House Flipper popup
-
     <TextView
         android:id="@+id/popup_game_developmentTeam"
         android:fontFamily="@font/kanit"
+        android:textColor="@color/lightGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
@@ -91,46 +82,48 @@
         app:layout_constraintTop_toBottomOf="@+id/popup_game_description" />
 
     <TextView
-        android:id="@+id/popup_game_releaseDate"
-        android:fontFamily="@font/kanit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/default_margin"
-        android:text="Date de sortie"
-        app:layout_constraintStart_toEndOf="@+id/popup_game_developmentTeam"
-        app:layout_constraintTop_toBottomOf="@+id/popup_game_description" />
-
-    <TextView
         android:id="@+id/popup_game_editorialTeam"
         android:fontFamily="@font/kanit"
+        android:textColor="@color/lightGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
-        android:layout_marginEnd="@dimen/default_margin"
         android:text="Equipe d'édition"
-        app:layout_constraintStart_toStartOf="@+id/popup_game_developmentTeam"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_game_developmentTeam" />
+
+    <TextView
+        android:id="@+id/popup_game_releaseDate"
+        android:fontFamily="@font/kanit"
+        android:textColor="@color/lightGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Date de sortie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popup_game_editorialTeam" />
 
     <TextView
         android:id="@+id/popup_game_price"
         android:fontFamily="@font/kanit"
+        android:textColor="@color/lightGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
         android:text="Prix"
-        app:layout_constraintStart_toStartOf="@+id/popup_game_releaseDate"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_game_releaseDate" />
 
     <TextView
         android:id="@+id/popup_game_steamUrl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/default_margin"
         android:fontFamily="@font/kanit"
-        android:text="En savoir plus..."
+        android:text="Lien vers la boutique"
         android:textColor="@color/blueUrl"
+        android:layout_marginTop="@dimen/default_margin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popup_game_editorialTeam" />
+        app:layout_constraintTop_toBottomOf="@+id/popup_game_price" />
 
 
 
